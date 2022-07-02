@@ -15,12 +15,12 @@ const initialValues = {
 const error = (error) => {
     return <div>error</div>
 }
-export default function FormCreate() {
+export default function FormCreate( { create } ) {
    const formik = useFormik({
     initialValues,
     validationSchema: createFormSchema,
     onSubmit: values => {
-        console.log('VALUES FORMIK',values)     
+        create(values)
     }
    })
  

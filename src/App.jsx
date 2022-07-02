@@ -1,10 +1,12 @@
-import logo from './logo.svg';
+
 import './App.css';
-import FormCreate from './components/form-create/form-create';
+
+import TaskList from './pages/task-list/task-list';
 
 function App() {
+
   return (
-    <FormCreate></FormCreate>
+    <TaskList></TaskList>
   );
 }
 

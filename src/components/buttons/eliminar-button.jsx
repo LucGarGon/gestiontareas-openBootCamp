@@ -1,7 +1,10 @@
 import React from 'react'
 
-export default function EliminarButton() {
+export default function EliminarButton({ task, deleteTask }) {
+  const handleClick = () => {
+    deleteTask(task)
+  }
   return (
-    null
+    <button onClick={handleClick}>eliminar tarea {task.id}</button>
   )
 }
