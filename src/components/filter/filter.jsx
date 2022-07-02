@@ -1,9 +1,11 @@
-import React, { useRef } from 'react'
+import React, { useContext, useRef } from 'react'
+import { TaskContext } from '../../hooks/taskContext';
 
-export default function Filter({ filter, tasks }) {
+export default function Filter() {
+  const {filterTask, tasks} = useContext(TaskContext)
   const inputFilter = useRef(null);
   const handleChange = (event) => {
-    filter({
+    filterTask({
       originalTasks: tasks,
       tasksToFilter: [],
       query: event.target.value,

@@ -1,8 +1,9 @@
 import { Button } from '@mui/material';
 import { useFormik } from 'formik';
-import React from 'react';
+import React, { useContext } from 'react';
 import * as Yup from 'yup';
 import AddIcon from '@mui/icons-material/Add';
+import { TaskContext } from '../../hooks/taskContext';
 const createFormSchema = Yup.object().shape(
     {
      name: Yup.string().required(),
@@ -16,17 +17,19 @@ const initialValues = {
 const error = (error) => {
     return <div>error</div>
 }
-export default function FormCreate( { create } ) {
+export default function FormCreate() {
+    const {  createTask } = useContext(TaskContext)
+
    const formik = useFormik({
     initialValues,
     validationSchema: createFormSchema,
     onSubmit: values => {
-        create(values)
+        createTask(values)
     }
    })
  
     return (
-    <div class="form_create">
+    <div className="form_create">
         <h4>Crear tarea</h4>
         <form onSubmit={formik.handleSubmit}
         >
