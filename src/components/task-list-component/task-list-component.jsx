@@ -16,7 +16,7 @@ export default function TaskListComponent({ tasks, deleteTask }) {
  {
  
  isTaskFilterOrOriginal().map((task, index) => (
-      <div key={task.id}>
+      <div className="task_filter" key={task.id}>
       <Task  task={task}></Task>
       <EliminarButton task={task} deleteTask={deleteTask}></EliminarButton>
       </div>

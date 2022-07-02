@@ -11,3 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.button_eliminar{
+  background:none;
+  border: none;
+}
+.button_eliminar:hover{
+  color: #1976d2
+}
+.task_filter{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.task_filter p {
+  font-size: 1rem;
+}
+.form_create{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form_create form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+}
+.form_create form input {
+  margin-bottom:5%;
+}
+.form_create form button {
+  margin-top:2%;
+  width: 100%;
+  font-size: 0.5rem;
+  align-self: center;
+
+}
+
+.filter {
+  margin-top:5%;
+}

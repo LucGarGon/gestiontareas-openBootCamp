@@ -10,7 +10,6 @@ export default function Filter({ filter, tasks }) {
     })
   }
   return <>
-    <h4>Filtro</h4>
-    <input ref={inputFilter} type="text" name="filter" onChange={handleChange}></input>
+    <input className='filter' ref={inputFilter} type="text" name="filter" onChange={handleChange} placeholder="Filtrar"></input>
  </>
 }
